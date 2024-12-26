@@ -1,0 +1,70 @@
+@import './base.css';
+
+#app {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.title {
+    color: green;
+}
+
+.calculator {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.result {
+    width: 90%;
+    padding: 10px;
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.number, .operator {
+    background-color: #f0f0f0;
+}
+
+.clear, .equal {
+    background-color: #ff6666;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.equal {
+    grid-column: span 2;
+}
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
